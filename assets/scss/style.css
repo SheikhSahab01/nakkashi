@@ -3,6 +3,10 @@ body {
   position: relative;
 }
 
+.text-dark {
+  color: #121518;
+}
+
 .section-heading {
   display: flex;
   flex-direction: column;
@@ -146,14 +150,20 @@ body {
 .banner {
   padding: 20em 0 20em;
   position: relative;
-  background-image: url(../images/banner-img.jpg);
+  background-image: url(../images/mainbg.png);
   background-position: top;
   background-size: cover;
   overflow: hidden;
 }
+.banner.banner-fub {
+  background-image: url(../images/f-hub.jpeg);
+}
+.banner.banner-fub .section-overlay {
+  opacity: 0.6;
+}
 .banner .section-overlay {
   background: #141414;
-  opacity: 0.6;
+  opacity: 0.3;
   position: absolute;
   top: 0;
   right: 0;
@@ -411,9 +421,7 @@ body {
 .custom {
   padding: 60px 0;
   font-family: "Poppins", sans-serif;
-  position: relative;
   background-color: #121518;
-  position: relative;
 }
 .custom .heading {
   text-align: center;
@@ -435,12 +443,51 @@ body {
 }
 .custom canvas {
   background: #fff;
-  height: 50vh;
   cursor: crosshair;
+  width: 100%;
+  height: 100%;
+}
+.custom .about-image {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+}
+.custom .about-image .explore-content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  background-color: rgba(18, 21, 24, 0.6549019608);
+  transition: all 0.6s ease;
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.custom .about-image .explore-content-wrapper h2 a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.custom .about-image img {
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+.custom .about-image:hover .explore-content-wrapper {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .custom .canvas-screenshoot-btn {
   position: absolute;
-  top: 20px;
+  top: 50px;
   right: 20px;
   padding: 10px 30px;
   border: none;
@@ -459,7 +506,7 @@ body {
 }
 .custom .canvas-clear-btn {
   position: absolute;
-  top: 20px;
+  top: 50px;
   left: 20px;
   padding: 10px 30px;
   border: none;
